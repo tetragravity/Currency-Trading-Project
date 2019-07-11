@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: false
+  price: 1
+  amount: 1
+  sum_usd: 1
+  sum_btc: 1
+
+two:
+  type: false
+  price: 1
+  amount: 1
+  sum_usd: 1
+  sum_btc: 1
