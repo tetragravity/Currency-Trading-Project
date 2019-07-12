@@ -1,5 +1,6 @@
 class Order {
     constructor(orderObject) {
+        // console.log(orderObject.id)
         this.id = orderObject.id;
         this.userId = orderObject.user_id;
         this.orderBookId = orderObject.orderbook_id;
@@ -14,6 +15,7 @@ class Order {
         if (this.typeBuy){
             let tBodyBuy = document.createElement("tbody")
             tBodyBuy.setAttribute("class", "buyArray")
+            tBodyBuy.setAttribute("id", this.id)
             let tr = document.createElement("tr")
             let priceTd = document.createElement("td")
             priceTd.innerText = this.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");;
@@ -33,6 +35,7 @@ class Order {
     getSellCell() {
         if (this.typeBuy != true){
             let tBodySell = document.createElement("tbody")
+            tBodySell.setAttribute("class", "sellArray")
             let tr = document.createElement("tr")
             let priceTd = document.createElement("td")
             priceTd.innerText = this.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");;

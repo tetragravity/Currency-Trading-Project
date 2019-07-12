@@ -11,13 +11,10 @@ class Adapter{
         .then(result => console.log(result))
     }
 
-    static deleteOrder(orderObj){
-        return fetch(`http://localhost:3000/api/v1/user_orders/${orderObj.id}`, {
+    static fetchDeleteOrder(orderId){
+        return fetch(`http://localhost:3000/api/v1/user_orders/${orderId}`, {
             method: 'delete'
         })
         .then(response => response.json())
     }
-
-
-    
 }
